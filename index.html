@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delta</title>
+  <link rel="icon" href="img2.jpg" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #111;
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 4rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .logo img {
+      height: 32px;
+      width: 32px;
+      margin-right: 10px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .auth-buttons a {
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px white;
+    }
+
+    .auth-buttons a:hover {
+      background-color: white;
+      color: #000;
+      box-shadow: 0 0 20px white;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      background: linear-gradient(to right, #191919, #2a2a2a);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-symbol {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.05;
+      z-index: 0;
+      height: 300px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .about, .features {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .features h2, .about h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .feature-card {
+      background: #222;
+      padding: 2rem;
+      border-radius: 12px;
+    }
+
+    .footer {
+      padding: 2rem;
+      text-align: center;
+      background: #0a0a0a;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <div class="nav-left">
+        <div class="logo">
+          <img src="{{ url_for('static', filename='img/img7-removebg-preview.png') }}" alt="Delta Logo" />
+          Delta
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+        </ul>
+      </div>
+      <div class="auth-buttons">
+        <a href="/login">Login</a>
+        <a href="/signup">Sign Up</a>
+      </div>
+    </nav>
+
+    <!-- Floating faint watermark -->
+    <img src="{{ url_for('static', filename='img/img7-removebg-preview.png') }}" alt="Delta Symbol Large" class="hero-symbol" />
+
+    <div class="hero-content">
+      <h1>Talk to Delta – Your Voice. Your Vibe.</h1>
+      <p>The AI assistant that sings, chats, jokes, and vibes with you. Say it, hear it, feel it.</p>
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <h2>What is Delta?</h2>
+    <p>Delta is your voice-powered entertainment companion. From blasting your favorite tunes to cracking jokes and having real conversations – it’s your fun friend that’s always on and always listening (in a good way!).</p>
+  </section>
+
+  <section id="features" class="features">
+    <h2>What Can It Do?</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>🎵 Play Songs</h3>
+        <p>Just say the name of a track, artist, or genre – and delta will play it instantly.</p>
+      </div>
+      <div class="feature-card">
+        <h3>😂 Make You Laugh</h3>
+        <p>From corny jokes to clever one-liners, delta keeps the fun going.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🗣️ Talk Back</h3>
+        <p>Delta doesn’t just listen – it chats, reacts, and vibes with your energy.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy;Created with 🎶 and 🤖 for good vibes only.</p>
+  </footer>
+</body>
+</html>
